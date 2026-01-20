@@ -1,0 +1,183 @@
+/* ===========================
+   DESIGN SYSTEM
+=========================== */
+
+:root {
+    --cor-primaria: #1A4B84;
+    --cor-secundaria: #4FA3D1;
+    --cor-fundo: #F5F5F5;
+    --cor-texto: #1A1A1A;
+    --cor-acento: #F2C94C;
+
+    --fonte-base: "Inter", Arial, sans-serif;
+
+    --radius: 8px;
+    --espaco: 1.5rem;
+}
+
+/* ===========================
+   RESET
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-base);
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header {
+    background: var(--cor-primaria);
+    color: white;
+    padding: 1rem;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.menu a:hover,
+.menu a:focus {
+    text-decoration: underline;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* ===========================
+   CONTEÚDO
+=========================== */
+
+.conteudo {
+    max-width: 1200px;
+    margin: auto;
+    padding: var(--espaco);
+}
+
+.secao {
+    margin-bottom: 3rem;
+}
+
+.secao h2 {
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+}
+
+.secao h3 {
+    margin-top: 1rem;
+    color: var(--cor-secundaria);
+}
+
+/* ===========================
+   IMAGENS
+=========================== */
+
+figure {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    display: block;
+    margin: auto;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.imagem-grande img {
+    max-width: 900px;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--cor-primaria);
+    color: white;
+    margin-top: 2rem;
+}
+
+/* ===========================
+   RESPONSIVIDADE
+=========================== */
+
+@media (max-width: 768px) {
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: var(--cor-primaria);
+        padding: 1rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: var(--cor-secundaria);
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius);
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
