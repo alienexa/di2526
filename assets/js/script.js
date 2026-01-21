@@ -32,7 +32,7 @@ function highlightActiveNav() {
     /* Obtém o nome do arquivo atual */
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('nav a');
-    
+
     navLinks.forEach(link => {
         const href = link.getAttribute('href').split('/').pop();
         /* Compara o href com a página atual */
@@ -49,13 +49,13 @@ highlightActiveNav();
 /* Adiciona efeito visual ao passar o mouse sobre os cards */
 document.querySelectorAll('.card, .trabalho-card').forEach(card => {
     /* Mouseenter: move card para cima e aumenta sombra */
-    card.addEventListener('mouseenter', function() {
+    card.addEventListener('mouseenter', function () {
         this.style.transform = 'translateY(-5px)';
         this.style.boxShadow = '0 8px 40px rgba(0, 0, 0, 0.15)';
     });
-    
+
     /* Mouseleave: retorna card ao estado original */
-    card.addEventListener('mouseleave', function() {
+    card.addEventListener('mouseleave', function () {
         this.style.transform = 'translateY(0)';
         this.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
     });
@@ -133,31 +133,31 @@ let currentFontSize = 100;
 function loadAccessibilityPreferences() {
     /* Obtém objeto JSON do localStorage ou retorna objeto vazio */
     const preferences = JSON.parse(localStorage.getItem('accessibilityPreferences')) || {};
-    
+
     /* Aplicar tamanho da fonte salvo */
     if (preferences.fontSize) {
         currentFontSize = preferences.fontSize;
         document.documentElement.style.fontSize = currentFontSize + '%';
     }
-    
+
     /* Aplicar alto contraste */
     if (preferences.highContrast) {
         document.body.classList.add('high-contrast');
         if (highContrastCheck) highContrastCheck.checked = true;
     }
-    
+
     /* Aplicar modo escuro */
     if (preferences.darkMode) {
         document.body.classList.add('dark-mode');
         if (darkModeCheck) darkModeCheck.checked = true;
     }
-    
+
     /* Aplicar destaque de links */
     if (preferences.highlightLinks) {
         document.body.classList.add('highlight-links');
         if (highlightLinksCheck) highlightLinksCheck.checked = true;
     }
-    
+
     /* Aplicar espaçamento aumentado */
     if (preferences.increasedSpacing) {
         document.body.classList.add('increased-spacing');
@@ -175,7 +175,7 @@ function saveAccessibilityPreferences() {
         highlightLinks: document.body.classList.contains('highlight-links'),
         increasedSpacing: document.body.classList.contains('increased-spacing')
     };
-    
+
     /* Salvar como JSON */
     localStorage.setItem('accessibilityPreferences', JSON.stringify(preferences));
 }
@@ -317,27 +317,27 @@ if (resetAccessibilityBtn) {
     resetAccessibilityBtn.addEventListener('click', () => {
         /* Remover todas as classes de acessibilidade */
         document.body.classList.remove('high-contrast', 'dark-mode', 'highlight-links', 'increased-spacing');
-        
+
         /* Resetar tamanho da fonte para 100% */
         currentFontSize = 100;
         document.documentElement.style.fontSize = currentFontSize + '%';
-        
+
         /* Desmarcar todos os checkboxes */
         if (highContrastCheck) highContrastCheck.checked = false;
         if (darkModeCheck) darkModeCheck.checked = false;
         if (highlightLinksCheck) highlightLinksCheck.checked = false;
         if (lineHeightCheck) lineHeightCheck.checked = false;
-        
+
         /* Parar leitura de voz se estiver ativa */
         const textToSpeechCheck = document.getElementById('text-to-speech');
         if (textToSpeechCheck) {
             textToSpeechCheck.checked = false;
             stopSpeech();
         }
-        
+
         /* Limpar dados do localStorage */
         localStorage.removeItem('accessibilityPreferences');
-        
+
         /* Feedback visual ao usuário */
         alert('Configurações de acessibilidade restauradas para o padrão!');
     });
@@ -369,28 +369,28 @@ function stopSpeech() {
 // Função para ler texto
 function speakText(text, element) {
     if (!text || text.trim() === '') return;
-    
+
     // Cancelar leitura anterior se houver
     if (speechSynthesis.speaking) {
         speechSynthesis.cancel();
     }
-    
+
     // Criar nova instância de leitura
     currentUtterance = new SpeechSynthesisUtterance(text);
-    
+
     // Configurações de voz
     currentUtterance.lang = 'pt-PT'; // Português de Portugal
     currentUtterance.rate = 0.9; // Velocidade (0.1 a 10)
     currentUtterance.pitch = 1; // Tom (0 a 2)
     currentUtterance.volume = 1; // Volume (0 a 1)
-    
+
     // Destacar elemento sendo lido
     if (element) {
         element.style.outline = '3px solid var(--primary)';
         element.style.backgroundColor = 'rgba(79, 70, 229, 0.1)';
         selectedElements.push(element);
     }
-    
+
     // Eventos de controle
     currentUtterance.onend = () => {
         isSpeaking = false;
@@ -399,12 +399,12 @@ function speakText(text, element) {
             element.style.backgroundColor = '';
         }
     };
-    
+
     currentUtterance.onerror = (event) => {
         console.error('Erro na leitura de voz:', event);
         isSpeaking = false;
     };
-    
+
     // Iniciar leitura
     speechSynthesis.speak(currentUtterance);
     isSpeaking = true;
@@ -415,7 +415,7 @@ function readPageContent() {
     // Selecionar elementos para leitura (priorizar conteúdo principal)
     const mainContent = document.querySelector('main') || document.body;
     const elementsToRead = mainContent.querySelectorAll('h1, h2, h3, p, li, button, a');
-    
+
     let textToRead = '';
     elementsToRead.forEach(el => {
         // Ignorar elementos ocultos ou do painel de acessibilidade
@@ -426,7 +426,7 @@ function readPageContent() {
             }
         }
     });
-    
+
     if (textToRead) {
         speakText(textToRead, mainContent);
     }
@@ -435,7 +435,7 @@ function readPageContent() {
 // Adicionar evento ao checkbox de Text-to-Speech
 const textToSpeechCheck = document.getElementById('text-to-speech');
 if (textToSpeechCheck) {
-    textToSpeechCheck.addEventListener('change', function() {
+    textToSpeechCheck.addEventListener('change', function () {
         if (this.checked) {
             // Verificar suporte do navegador
             if (!('speechSynthesis' in window)) {
@@ -443,16 +443,16 @@ if (textToSpeechCheck) {
                 this.checked = false;
                 return;
             }
-            
+
             // Ativar modo de leitura
             isSpeaking = true;
-            
+
             // Ler conteúdo da página
             readPageContent();
-            
+
             // Adicionar listeners para ler ao passar o mouse (opcional)
             document.querySelectorAll('h1, h2, h3, p, button, a').forEach(el => {
-                el.addEventListener('mouseenter', function(e) {
+                el.addEventListener('mouseenter', function (e) {
                     if (isSpeaking && textToSpeechCheck.checked) {
                         const text = this.textContent.trim();
                         if (text && !this.closest('#accessibility-panel')) {
@@ -461,15 +461,15 @@ if (textToSpeechCheck) {
                     }
                 });
             });
-            
+
             // Feedback ao usuário
             console.log('Leitura de voz ativada. Passe o mouse sobre os elementos para ouvir.');
-            
+
         } else {
             // Desativar e parar leitura
             stopSpeech();
         }
-        
+
         saveAccessibilityPreferences();
     });
 }
@@ -486,7 +486,7 @@ document.addEventListener('keydown', (e) => {
             saveAccessibilityPreferences();
         }
     }
-    
+
     // Ctrl + Shift + R = Ler página
     if (e.ctrlKey && e.shiftKey && e.key === 'R') {
         e.preventDefault();
@@ -515,6 +515,25 @@ document.querySelectorAll(".sidebar-menu a").forEach(link => {
     });
 });
 
+// Flip cards: click / Enter / Space
+document.querySelectorAll('.flip-card__inner').forEach(inner => {
+    // Click/touch no botão "Ver mais" e "Voltar"
+    inner.querySelectorAll('.flip-card__btn').forEach(btn => {
+        btn.addEventListener('click', e => {
+            e.preventDefault();
+            inner.classList.toggle('is-flipped');
+        });
+    });
+
+    // Teclado: Enter ou Space no foco do card
+    inner.addEventListener('keydown', e => {
+        const key = e.key.toLowerCase();
+        if (key === 'enter' || key === ' ') {
+            e.preventDefault();
+            inner.classList.toggle('is-flipped');
+        }
+    });
+});
 
 /* ===== INICIALIZAÇÃO ===== */
 /* Carregar preferências salvas ao iniciar a página */
