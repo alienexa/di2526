@@ -1,212 +1,218 @@
 <!DOCTYPE html>
 <html lang="pt">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Design de Interfaces</title>
+    <!-- Meta tags: configuração do charset e responsividade -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfólio de Design de Interfaces.">
+    <meta name="theme-color" content="#6366f1">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <!-- Título da página exibido na aba do navegador -->
+    <title>Portfólio de Design de Interfaces - Alexandra Rodrigues</title>
 
-    <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts: Inter - Fonte moderna e acessível otimizada para legibilidade -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Favicon (ícone da aba) -->
+    <link rel="icon" href="assets/img/logo.png" type="Logo">
+
+    <!-- Link para folha de estilos CSS externa -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <header class="header">
-        <nav aria-label="Menu principal">
-            <a class="logo" href="index.html">Composição Visual</a>
+    <!-- Navegação principal do site com role semântico -->
+    <nav aria-label="Navegação principal">
+        <div class="nav-container">
+            <!-- Logo do portfólio com link para página inicial -->
+            <a class="logo" href="index.html" aria-label="Portfólio de Design - Ir para página inicial">
+                <img src="assets/img/logo.png" alt="Logotipo">
+            </a>
 
-            <button class="menu-toggle" aria-expanded="false" aria-controls="menu">
-                <span class="bar top"></span>
-                <span class="bar middle"></span>
-                <span class="bar bottom"></span>
+            <button id="menu-toggle" aria-label="Abrir menu" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
 
-            <ul id="menu" class="menu">
-                <li><a href="index.html">P1</a></li>
-                <li><a href="pagina2.html">P2</a></li>
-                <li><a href="pagina3.html">P3</a></li>
-                <li><a href="pagina4.html">P4</a></li>
-                <li><a href="pagina5.html">P5</a></li>
-                <li><a href="pagina6.html">P6</a></li>
-                <li><a href="pagina7.html">P7</a></li>
+
+            <!-- Menu de navegação com links principais -->
+            <ul role="menubar">
+                <li role="none"><a href="index.html" role="menuitem">Início</a></li>
+                <li role="none"><a href="paginas/pagina1.html" role="menuitem">Introdução ao Design</a></li>
+                <li role="none"><a href="paginas/pagina2.html" role="menuitem">Composição Visual</a></li>
+                <li role="none"><a href="paginas/pagina3.html" role="menuitem">Tipos e Formatos</a></li>
+                <li role="none"><a href="paginas/pagina4.html" role="menuitem">Espaço Negativo</a></li>
+                <li role="none"><a href="paginas/pagina5.html" role="menuitem">Tendencias Visuais </a></li>
+                <li role="none"><a href="paginas/pagina6.html" role="menuitem">Acessibilidade</a></li>
             </ul>
-        </nav>
+        </div>
+    </nav>
+
+    <aside id="sidebar" class="sidebar">
+    <nav class="sidebar-menu">
+        <a href="index.html">Início</a>
+        <a href="paginas/pagina1.html">Introdução ao Design</a>
+        <a href="paginas/pagina2.html">Composição Visual</a>
+        <a href="paginas/pagina3.html">Tipos e Formatos</a>
+        <a href="paginas/pagina4.html">Espaço Negativo</a>
+        <a href="paginas/pagina5.html">Tendências Visuais</a>
+        <a href="paginas/pagina6.html">Acessibilidade</a>
+    </nav>
+</aside>
+
+
+    <!-- Seção de cabeçalho (header) com título e descrição -->
+    <header role="banner">
+        <!-- Título principal da página -->
+        <h1>Este é o meu portfolio de trabalhos de Design de Interfaces</h1>
+        <!-- Descrição do conteúdo do portfólio -->
+        <p>Sinta-se à vontade para explorar os meus trabalhos desenvolvidos. Eu sou a Alexandra e estes foram os trabalhos que desenvolvi ao longo da unidade curricular de Design de Interfaces.</p>
     </header>
 
-    <section class="banner-overlay">
-        <img src="img/cover.avif" alt="Imagem de capa" class="banner-bg">
-        <div class="banner-overlay-conteudo">
-            <h1>Design de Interfaces</h1>
-            <p>Resumo estruturado dos conceitos essenciais apresentados no documento original.</p>
-        </div>
-    </section>
+    <!-- Seção principal com conteúdo da página -->
+    <main class="container" role="main" aria-label="Conteúdo principal">
+        <!-- Título principal da página de trabalhos -->
+        <h1 class="titulo-principal">Trabalhos desenvolvidos em Design de Interface</h1>
 
-    <main class="conteudo">
+        <!-- Grid de cards de trabalhos/projetos (6 colunas responsivas) -->
+        <div class="trabalhos-grid">
+            <!-- Card 1: Introdução ao Design de Interface -->
+            <div class="trabalho-card">
+                <!-- Ícone do card -->
+                <div class="card-icon"
+                    style="background: linear-gradient(135deg, #4f46e5 0%, #4f46e5 100%); opacity: 0.15;">
+                    <span class="work-card-number"></span>
+                </div>
+                <h3>Introdução ao Design</h3>
+                <p>Fundamentos de UI/UX e o equilíbrio entre estética e função.</p>
+                <a href="paginas/pagina1.html" class="trabalho-btn">Ver Trabalho</a>
+            </div>
 
-    <!-- 1 — O que é Composição Visual -->
-    <section class="layout-duplo">
-        <div class="coluna-esquerda">
-            <h2>O que é Composição Visual?</h2>
-            <p>A composição visual é a forma como elementos como linhas, formas, cores e espaços são organizados
-                para criar harmonia e clareza.</p>
-            <p>Podemos pensar na composição visual como:</p>
-            <ul>
-                <li><strong>Culinária:</strong> combinação equilibrada de ingredientes.</li>
-                <li><strong>Música:</strong> organização de notas para criar harmonia.</li>
-                <li><strong>Arquitetura:</strong> relação entre elementos estruturais.</li>
-            </ul>
-        </div>
-        <div class="coluna-direita">
-            <img src="img/composicao.webp" alt="Exemplo ilustrativo de composição visual" />
-        </div>
-    </section>
+            <!-- Card 2: Composição Visual -->
+            <div class="trabalho-card">
+                <!-- Ícone do card -->
+                <div class="card-icon"
+                    style="background: linear-gradient(135deg, #7c3aed 0%, #7c3aed 100%); opacity: 0.15;">
+                    <span class="work-card-number"></span>
+                </div>
+                <h3>Composição Visual</h3>
+                <p>Equilíbrio, Contraste e Alinhamento na interface.</p>
+                <a href="paginas/pagina2.html" class="trabalho-btn">Ver Trabalho</a>
+            </div>
 
-    <!-- 2 — Elementos Básicos -->
-    <section class="layout-duplo invertido">
-        <div class="coluna-esquerda">
-            <h2>Elementos Básicos</h2>
-            <ul>
-                <li><strong>Pontos: </strong>Unidades mais Simples</li>
-                <li><strong>Linhas: </strong>Direcionam o olhar</li>
-                <li><strong>Forma: </strong>Figuras geometricas ou organicas</li>
-                <li><strong>Cor: </strong>Criam emoção e hierarquia</li>
-                <li><strong>Textur: </strong>Superficies visuais</li>
-                <li><strong>Espaço: </strong>Area positiva e negativa</li>
-            </ul>
-        </div>
-        <div class="coluna-direita">
-            <img src="img/elementos.png" alt="Demonstração dos elementos básicos do design" />
-        </div>
-    </section>
+            <!-- Card 3: Tipos e Formatos de Ficheiro -->
+            <div class="trabalho-card">
+                <!-- Ícone do card -->
+                <div class="card-icon"
+                    style="background: linear-gradient(135deg, #db2777 0%, #db2777 100%); opacity: 0.15;">
+                    <span class="work-card-number"></span>
+                </div>
+                <h3>Tipos e Formatos</h3>
+                <p>Diferenças entre Raster, Vetorial e extensões de ficheiro.</p>
+                <a href="paginas/pagina3.html" class="trabalho-btn">Ver Trabalho</a>
+            </div>
 
-    <!-- 3 — Princípios de Composição -->
-    <section class="layout-duplo">
-        <div class="coluna-esquerda">
-            <h2>Princípios de Composição</h2>
-            <ul>
-                <li><strong>Equilíbrio: </strong>Distribuição harmoniosa dos elementos</li>
-                <li><strong>Contraste: </strong>Diferenciação e hierarquia</li>
-                <li><strong>Alinhamento: </strong>Organização e legibilidade</li>
-            </ul>
-        </div>
-        <div class="coluna-direita">
-            <img src="img/principios.png" alt="Princípios essenciais da composição visual" />
-        </div>
-    </section>
+            <!-- Card 4: Espaço Negativo -->
+            <div class="trabalho-card">
+                <!-- Ícone do card -->
+                <div class="card-icon"
+                    style="background: linear-gradient(135deg, #0891b2 0%, #0891b2 100%); opacity: 0.15;">
+                    <span class="work-card-number"></span>
+                </div>
+                <h3>Espaço Negativo</h3>
+                <p>A importância do vazio e a hierarquia visual.</p>
+                <a href="paginas/pagina4.html" class="trabalho-btn">Ver Trabalho</a>
+            </div>
 
-    <!-- 4 — Tipos de Equilíbrio -->
-    <section class="layout-duplo invertido">
-        <div class="coluna-esquerda">
-            <h2>Tipos de Equilíbrio</h2>
-            <h3>Simétrico</h3>
-            <p>Distribuição espelhada dos elementos.</p>
-            <h3>Assimétrico</h3>
-            <p>Elementos diferentes com pesos visuais equivalentes.</p>
-            <h3>Radial</h3>
-            <p>Elementos organizados à volta de um ponto central.</p>
-        </div>
-        <div class="coluna-direita">
-            <img src="img/equilibrio.webp" alt="Exemplos de equilíbrio visual" />
-        </div>
-    </section>
+            <!-- Card 5: Tendências Visuais Atuais -->
+            <div class="trabalho-card">
+                <!-- Ícone do card -->
+                <div class="card-icon"
+                    style="background: linear-gradient(135deg, #059669 0%, #059669 100%); opacity: 0.15;">
+                    <span class="work-card-number"></span>
+                </div>
+                <h3>Tendências Visuais</h3>
+                <p>Maximalismo, Neomorfismo e estilos atuais.</p>
+                <a href="paginas/pagina5.html" class="trabalho-btn">Ver Trabalho</a>
+            </div>
 
-    <!-- 5 — Contraste -->
-    <section class="layout-duplo">
-        <div class="coluna-esquerda">
-            <h2>Contraste</h2>
-            <ul>
-                <li><strong>Cor: </strong>Usa cores opostas no círculo cromatico (complementares), ou combina cores quentes com cores frias para criar impacto.</li>
-                <li><strong>Tamanho: </strong>Ampliando um elemento em relação a outros permite tornalo num ponto focal.</li>
-                <li><strong>Luminosidade: </strong> Contraste entre claro e escuro ajuda a destacar objetos e a criar profundidade.</li>
-                <li><strong>Textura: </strong>Combina texturas suaves com texturas rusticas para criar </li>
-            </ul>
+            <!-- Card 6: Acessibilidade Digital (WCAG 2.1) -->
+            <div class="trabalho-card">
+                <!-- Ícone do card -->
+                <div class="card-icon"
+                    style="background: linear-gradient(135deg, #dc2626 0%, #dc2626 100%); opacity: 0.15;">
+                    <span class="work-card-number"></span>
+                </div>
+                <h3>Acessibilidade</h3>
+                <p>Padrões WCAG e como criar interfaces inclusivas.</p>
+                <a href="paginas/pagina6.html" class="trabalho-btn">Ver Trabalho</a>
+            </div>
         </div>
-        <div class="coluna-direita">
-            <img src="img/contraste.png" alt="Exemplo de contraste visual" />
-        </div>
-    </section>
+    </main>
 
-    <!-- 6 — Alinhamento -->
-    <section class="layout-duplo invertido">
-        <div class="coluna-esquerda">
-            <h2>Alinhamento</h2>
-            <ul>
-                <li><strong>Horizontal</strong> Os elementos são alinhados ao longo de uma linha horizontal, como à esquerda, à direita ou ao centro</li>
-                <li><strong>Vertical</strong></li>
-                <li><strong>Em grade</strong></li>
-                <li><strong>Centralizado</strong></li>
-                <li><strong>Justificado</strong></li>
-            </ul>
-        </div>
-        <div class="coluna-direita">
-            <img src="img/alinhamento.png" alt="Tipos de alinhamento visual" />
-        </div>
-    </section>
+    <!-- Rodapé da página com informações e links -->
+    <footer role="contentinfo" aria-label="Informações do rodapé">
+        <!-- Container do rodapé com várias seções -->
+        <div class="footer-container">
+            <!-- Seção de Sobre -->
+            <section class="footer-section" aria-label="Sobre">
+                <h3>Sobre</h3>
+                <p>Portfólio de Design de Interfaces</p>
+                <p>IPLuso - CTeSP DWDM 2025/2026</p>
+            </section>
 
-    <!-- 7 — Grids e Malhas -->
-    <section class="layout-duplo">
-        <div class="coluna-esquerda">
-            <h2>Grids e Malhas</h2>
-            <p>Estruturas invisíveis que organizam elementos e criam consistência.</p>
-            <ul>
-                <li><strong>Grid Manuscrito: </strong>Utiliza colunas largas para organizar textos extensos</li>
-                <li><strong>Grid Colunas: </strong>Divide a pagina em colunas flexiveis para alinhar e organizar o conteudo</li>
-                <li><strong>Grid Modular: </strong>Cria uma matriz com linhas e colunas que formam modulos uniformes</li>
-                <li><strong>Grid Hierarquico: </strong>Organiza o conteúdo com base na sua importancia, utilizando colunas de largura variadas e uma abordagem mais orgânica</li>
-            </ul>
-        </div>
-        <div class="coluna-direita">
-            <img src="img/grid.avif" alt="Exemplo de grid de design" />
-        </div>
-    </section>
+            <!-- Seção de Contacto -->
+            <address class="footer-section" aria-label="Informações de contacto">
+                <h3>Contactos</h3>
+                <p><a href="mailto:alexandra.daniela5555@outlook.pt">Email: alexandra.daniela5555@outlook.pt</a></p>
+                <p><a href="tel:+351936684389">Contacto: +351 936 684 389</a></p>
+            </address>
 
-    <!-- 8 — UI e UX -->
-    <section class="layout-duplo invertido">
-        <div class="coluna-esquerda">
-            <h2>UI e UX</h2>
-            <ul>
-                <li><strong> UX (User Experience): </strong>Foca na experiência geral e no que o utilizador sente, garantindo uma navegação intuitiva e satisfatória</li>
-                <li><strong> UI (User Interface): </strong> Foca no aspeto visual e interativo, ou seja, no que o utilizador vê e toca (botões, cores e layouts)</li>
-                <li><strong> Interdependência: </strong>Trabalham em conjunto; enquanto o designer de UX define o fluxo, o de UI desenha os elementos visuais específicos para completar a tarefa</li>
-            </ul>
-        </div>
-        <div class="coluna-direita">
-            <img src="img/ui-ux.png" alt="Representação da relação entre UI e UX" />
-        </div>
-    </section>
+            <!-- Seção de Redes Sociais com ícones SVG -->
+            <div class="footer-section" aria-label="Redes sociais">
+                <h3>Redes Sociais</h3>
+                <div class="social-links" role="list">
+                    <!-- Link do Instagram -->
+                    <a href="https://www.instagram.com/alienexa12/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visite o Instagram (abre em nova aba)" role="listitem">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.057-1.645.069-4.849.069-3.204 0-3.584-.012-4.849-.069-3.259-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z" />
+                        </svg>
+                    </a>
 
-    <!-- 9 — Acessibilidade e WCAG -->
-    <section class="layout-duplo">
-        <div class="coluna-esquerda">
-            <h2>Acessibilidade e WCAG</h2>
-            <p>A acessibilidade garante que todos conseguem usar o produto digital.</p>
+                    <!-- Link do LinkedIn -->
+                    <a href="https://www.linkedin.com/in/alexandra-daniela-rodrigues/" target="_blank"
+                        rel="noopener noreferrer" aria-label="Visite o LinkedIn (abre em nova aba)" role="listitem">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
+                        </svg>
+                    </a>
+
+                    <!-- Link do GitHub -->
+                    <a href="https://github.com/alienexa" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visite o GitHub (abre em nova aba)" role="listitem">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="coluna-direita">
-            <img src="img/wcag.png" alt="Princípios WCAG" />
+
+        <!-- Rodapé inferior com copyright -->
+        <div class="footer-bottom">
+            <p>&copy; Alexandra Rodrigues • 2025/2026 • Design de Interfaces</p>
         </div>
-    </section>
-
-</main>
-
-
-    <footer class="footer">
-        <p>© Alexandra Rodrigues a22400326 • 2025/2026 • Design de Interfaces</p>
     </footer>
 
-    <script>
-        const toggle = document.querySelector('.menu-toggle');
-        const menu = document.querySelector('#menu');
-
-        toggle.addEventListener('click', () => {
-            const expanded = toggle.getAttribute('aria-expanded') === 'true';
-            toggle.setAttribute('aria-expanded', !expanded);
-            menu.classList.toggle('show');
-            toggle.classList.toggle('active');
-        });
-    </script>
-
+    <!-- Script JavaScript externo para funcionalidades interativas -->
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
