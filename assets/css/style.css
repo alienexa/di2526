@@ -251,12 +251,9 @@ header h1 {
     transform-style: preserve-3d;
 }
 
-
 .card-icon {
     display: none !important
 }
-
-/* remove ícone do topo */
 
 /* Botões padrão */
 .trabalho-btn {
