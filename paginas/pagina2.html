@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <!-- Meta tags: configuração do charset e responsividade -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Portfólio de Design de Interfaces.">
+    <meta name="description" content="Portfólio de Design de Interfaces.">
     <meta name="theme-color" content="#6366f1">
 
     <!-- Título da página exibido na aba do navegador -->
@@ -17,17 +17,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Favicon (ícone da aba) -->
-    <link rel="icon" href="../assets/img/logo.png" type="Logo">
+    <link rel="icon" href="assets/img/logo.png" type="Logo">
 
     <!-- Link para folha de estilos CSS externa -->
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+
 <body>
     <!-- Navegação principal do site com role semântico -->
     <nav aria-label="Navegação principal">
         <div class="nav-container">
             <!-- Logo do portfólio com link para página inicial -->
-            <a class="logo" href="index.html" aria-label="Portfólio de Design - Ir para página inicial">
+            <a class="logo" href="../index.html" aria-label="Portfólio de Design - Ir para página inicial">
                 <img src="../assets/img/logo.png" alt="Logotipo">
             </a>
 
@@ -42,39 +43,250 @@
             <ul role="menubar">
                 <li role="none"><a href="../index.html" role="menuitem">Início</a></li>
                 <li role="none"><a href="pagina1.html" role="menuitem">Introdução ao Design</a></li>
-                <li role="none"><a href="pagina2.html" role="menuitem">Composição Visual</a></li>
-                <li role="none"><a href="pagina3.html" role="menuitem">Tipos e Formatos</a></li>
-                <li role="none"><a href="pagina4.html" role="menuitem">Espaço Negativo</a></li>
-                <li role="none"><a href="pagina5.html" role="menuitem">Tendencias Visuais </a></li>
-                <li role="none"><a href="pagina6.html" role="menuitem">Acessibilidade</a></li>
+                <li role="none"><a href="pagina2.html" role="menuitem">Tipos e Formatos de Imagem</a></li>
+                <li role="none"><a href="pagina3.html" role="menuitem">Espaço Negativo</a></li>
+                <li role="none"><a href="pagina4.html" role="menuitem">Tendencias Visuais Atuais</a></li>
+                <li role="none"><a href="pagina5.html" role="menuitem">WCAG 2.1 e Acessibilidade </a></li>
             </ul>
         </div>
     </nav>
 
     <aside id="sidebar" class="sidebar">
-    <nav class="sidebar-menu">
-        <a href="../index.html">Início</a>
-        <a href="pagina1.html">Introdução ao Design</a>
-        <a href="pagina2.html">Composição Visual</a>
-        <a href="pagina3.html">Tipos e Formatos</a>
-        <a href="pagina4.html">Espaço Negativo</a>
-        <a href="pagina5.html">Tendências Visuais</a>
-        <a href="pagina6.html">Acessibilidade</a>
-    </nav>
+        <nav class="sidebar-menu">
+            <a href="../index.html">Início</a>
+            <a href="pagina1.html">Introdução ao Design</a>
+            <a href="pagina2.html">Tipos e Formatos de Imagem</a>
+            <a href="pagina3.html">Espaço Negativo</a>
+            <a href="pagina4.html">Tendencias Visuais Atuais</a>
+            <a href="pagina5.html">WCAG 2.1 e Acessibilidade</a>
+        </nav>
     </aside>
+
     <!-- Seção de cabeçalho (header) com título e descrição -->
     <header role="banner">
         <!-- Título principal da página -->
-        <h1>Este é o meu portfolio de trabalhos de Design de Interfaces</h1>
-        <!-- Descrição do conteúdo do portfólio -->
-        <p>Sinta-se à vontade para explorar os meus trabalhos desenvolvidos. Eu sou a Alexandra e estes foram os trabalhos que desenvolvi ao longo da unidade curricular de Design de Interfaces.</p>
+        <h1>Tipos e Formatos de Imagem</h1>
     </header>
     <!-- Seção principal com conteúdo da página -->
     <main class="container" role="main" aria-label="Conteúdo principal">
+        <!-- ===================================================
+    SECÇÃO 1 — 2 CARDS (Raster e Vetorial)
+=================================================== -->
+        <section class="container" aria-labelledby="sec1-titulo">
+            <h2 id="sec1-titulo" class="titulo-principal">Tipos de Imagem</h2>
 
+            <div class="trabalhos-grid flip-grid" role="list">
+                <!-- Card 1 — Raster -->
+                <article class="flip-card" role="listitem">
+                    <div class="flip-card__inner">
+                        <div class="flip-card__face flip-card__front">
+                            <h3>Raster</h3>
+                            <button class="trabalho-btn flip-card__btn" aria-label="Ver mais sobre Raster">Ver mais</button>
+                        </div>
+                        <div class="flip-card__face flip-card__back">
+                            <h4>Raster (bitmap)</h4>
+                            <div class="flip-card__content">
+                                <p>São formadas por pixels (pontos de cor) e perdem qualidade quando o seu tamanho é aumentado.</p>
+                                <ul>
+                                    <li><strong>Formatos:</strong> JPEG, PNG, BMP, GIF</li>
+                                    <li><strong>Uso:</strong> fotografias, imagens ricas em detalhe</li>
+                                </ul>
+                            </div>
+                            <button class="trabalho-btn flip-card__btn" aria-label="Voltar">Voltar</button>
+                        </div>
+                    </div>
+                </article>
 
+                <!-- Card 2 — Vetorial -->
+                <article class="flip-card" role="listitem">
+                    <div class="flip-card__inner">
+                        <div class="flip-card__face flip-card__front">
+                            <h3>Vetorial</h3>
+                            <button class="trabalho-btn flip-card__btn" aria-label="Ver mais sobre Vetorial">Ver mais</button>
+                        </div>
+                        <div class="flip-card__face flip-card__back">
+                            <h4>Gráficos Vetoriais</h4>
+                            <div class="flip-card__content">
+                                <p>Baseiam-se em formas geométricas (linhas, curvas e polígonos) e podem ser redimensionadas sem qualquer perda de qualidade.</p>
+                                <ul>
+                                    <li><strong>Usos:</strong> logótipos, ícones, ilustrações</li>
+                                    <li><strong>Formatos:</strong> SVG, AI, EPS</li>
+                                </ul>
+                            </div>
+                            <button class="trabalho-btn flip-card__btn" aria-label="Voltar">Voltar</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
 
+        <!-- ===================================================
+    SECÇÃO 2 — TABELA HTML (Formatos)
+=================================================== -->
+        <section class="container" aria-labelledby="tabela-formatos-titulo">
+            <h2 id="tabela-formatos-titulo" class="titulo-principal">Tabela de Formatos de Imagem</h2>
 
+            <div class="table-wrapper" role="region" aria-labelledby="tabela-formatos-titulo">
+                <table class="ui-table" aria-describedby="tabela-caption">
+                    <caption id="tabela-caption" class="sr-only">Comparação de formatos de imagem: tipo, características
+                        e exemplos de uso.</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Formato</th>
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Características</th>
+                            <th scope="col">Exemplos de uso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">JPEG (JPG)</th>
+                            <td>Raster</td>
+                            <td>Compacta, perde qualidade (compressão com perda)</td>
+                            <td>Fotos digitais, redes sociais</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">PNG</th>
+                            <td>Raster</td>
+                            <td>Suporta transparência, sem perda de qualidade</td>
+                            <td>Design de sites, logótipos simples</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">GIF</th>
+                            <td>Raster</td>
+                            <td>Animações simples, paleta limitada (256 cores)</td>
+                            <td>Memes, ícones animados</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">BMP</th>
+                            <td>Raster</td>
+                            <td>Alta qualidade, sem compressão; ficheiros grandes</td>
+                            <td>Uso técnico e profissional</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">TIFF</th>
+                            <td>Raster</td>
+                            <td>Sem perda, muito usado em fotografia e impressão</td>
+                            <td>Edição profissional</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">SVG</th>
+                            <td>Vetorial</td>
+                            <td><strong>Redimensionável, leve, formato aberto</strong></td>
+                            <td>Logótipos, ícones, gráficos</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ===================================================
+    SECÇÃO 3 — 2 CARDS (RGB e CMYK)
+=================================================== -->
+        <section class="container" aria-labelledby="sec3-titulo">
+            <h2 id="sec3-titulo" class="titulo-principal">Modelos de Cores</h2>
+
+            <div class="trabalhos-grid flip-grid" role="list">
+                <!-- Card 3 — RGB -->
+                <article class="flip-card" role="listitem">
+                    <div class="flip-card__inner">
+                        <div class="flip-card__face flip-card__front">
+                            <h3>RGB (Red, Green, Blue)</h3>
+                            <button class="trabalho-btn flip-card__btn" aria-label="Ver mais sobre RGB">Ver mais</button>
+                        </div>
+                        <div class="flip-card__face flip-card__back">
+                            <h4>RGB — Aditivo</h4>
+                            <div class="flip-card__content">
+                                <p>Modelo de cores aditivas baseado na luz. A mistura de todas as cores resulta na luz branca.</p>
+                                <ul>
+                                    <li><strong>Vantagem:</strong> grande gama e brilho</li>
+                                    <li><strong>Uso:</strong> UI, web, vídeo</li>
+                                </ul>
+                            </div>
+                            <button class="trabalho-btn flip-card__btn" aria-label="Voltar">Voltar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4 — CMYK -->
+                <article class="flip-card" role="listitem">
+                    <div class="flip-card__inner">
+                        <div class="flip-card__face flip-card__front">
+                            <h3>CMYK (Cyan, Magenta, Yellow, Black)</h3>
+                            <button class="trabalho-btn flip-card__btn" aria-label="Ver mais sobre CMYK">Ver mais</button>
+                        </div>
+                        <div class="flip-card__face flip-card__back">
+                            <h4>CMYK — Subtrativo</h4>
+                            <div class="flip-card__content">
+                                <p>Modelo de cores subtrativas baseado em pigmentos (tintas). A mistura resulta em preto ou castanho escuro.</p>
+                                <ul>
+                                    <li><strong>Uso:</strong> impressão em papel/tecidos</li>
+                                    <li><strong>Nota:</strong> conversões RGB→CMYK podem alterar cores</li>
+                                </ul>
+                            </div>
+                            <button class="trabalho-btn flip-card__btn" aria-label="Voltar">Voltar</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===================================================
+    SECÇÃO 4 — 2 CARDS (HSV/HSB & HSL e Compressão)
+=================================================== -->
+        <section class="container" aria-labelledby="sec4-titulo">
+            <h2 id="sec4-titulo" class="titulo-principal">Sistemas e Boas Práticas</h2>
+
+            <div class="trabalhos-grid flip-grid" role="list">
+                <!-- Card 5 — HSV/HSB e HSL -->
+                <article class="flip-card" role="listitem">
+                    <div class="flip-card__inner">
+                        <div class="flip-card__face flip-card__front">
+                            <h3>HSV/HSB &amp; HSL</h3>
+                            <button class="trabalho-btn flip-card__btn" aria-label="Ver mais sobre HSV/HSB e HSL">Ver mais</button>
+                        </div>
+                        <div class="flip-card__face flip-card__back">
+                            <h4>HSV / HSB / HSL</h4>
+                            <div class="flip-card__content">
+                                <p>Modelos mais intuitivos para humanos, baseados em Matiz (Hue), Saturação e Brilho/Luminosidade</p>
+                                <ul>
+                                    <li><strong>HSV/HSB:</strong> Hue, Saturation, Value/Brightness</li>
+                                    <li><strong>HSL:</strong> Hue, Saturation, Lightness</li>
+                                    <li><strong>Uso:</strong> escolha de cor em editores e UI</li>
+                                </ul>
+                            </div>
+                            <button class="trabalho-btn flip-card__btn" aria-label="Voltar">Voltar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 6 — Compressão de Imagens -->
+                <article class="flip-card" role="listitem">
+                    <div class="flip-card__inner">
+                        <div class="flip-card__face flip-card__front">
+                            <h3>Compressão de Imagens</h3>
+                            <p>5 propriedades essenciais para uso profissional.</p>
+                            <button class="trabalho-btn flip-card__btn" aria-label="Ver mais sobre Compressão">Ver
+                                mais</button>
+                        </div>
+                        <div class="flip-card__face flip-card__back">
+                            <h4>Propriedades Essenciais</h4>
+                            <div class="flip-card__content">
+                                <ol>
+                                    <li><strong>Resolução:</strong> PPI/DPI — mais alto = melhor (e maior ficheiro)</li>
+                                    <li><strong>Profundidade de Cor:</strong> bits por pixel (ex.: 24‑bit ≈ 16M cores)
+                                    </li>
+                                    <li><strong>Tamanho:</strong> resultado de resolução + especificações</li>
+                                    <li><strong>Dimensões:</strong> largura × altura em pixels</li>
+                                    <li><strong>Formato:</strong> define métodos/níveis de compressão</li>
+                                </ol>
+                            </div>
+                            <button class="trabalho-btn flip-card__btn" aria-label="Voltar">Voltar</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
     <!-- Rodapé da página com informações e links -->
     <footer role="contentinfo" aria-label="Informações do rodapé">
@@ -86,14 +298,12 @@
                 <p>Portfólio de Design de Interfaces</p>
                 <p>IPLuso - CTeSP DWDM 2025/2026</p>
             </section>
-
             <!-- Seção de Contacto -->
             <address class="footer-section" aria-label="Informações de contacto">
                 <h3>Contactos</h3>
                 <p><a href="mailto:alexandra.daniela5555@outlook.pt">Email: alexandra.daniela5555@outlook.pt</a></p>
                 <p><a href="tel:+351936684389">Contacto: +351 936 684 389</a></p>
             </address>
-
             <!-- Seção de Redes Sociais com ícones SVG -->
             <div class="footer-section" aria-label="Redes sociais">
                 <h3>Redes Sociais</h3>
@@ -106,7 +316,6 @@
                                 d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.057-1.645.069-4.849.069-3.204 0-3.584-.012-4.849-.069-3.259-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z" />
                         </svg>
                     </a>
-
                     <!-- Link do LinkedIn -->
                     <a href="https://www.linkedin.com/in/alexandra-daniela-rodrigues/" target="_blank"
                         rel="noopener noreferrer" aria-label="Visite o LinkedIn (abre em nova aba)" role="listitem">
@@ -115,7 +324,6 @@
                                 d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
                         </svg>
                     </a>
-
                     <!-- Link do GitHub -->
                     <a href="https://github.com/alienexa" target="_blank" rel="noopener noreferrer"
                         aria-label="Visite o GitHub (abre em nova aba)" role="listitem">
@@ -127,14 +335,13 @@
                 </div>
             </div>
         </div>
-
         <!-- Rodapé inferior com copyright -->
         <div class="footer-bottom">
             <p>&copy; Alexandra Rodrigues • 2025/2026 • Design de Interfaces</p>
         </div>
     </footer>
-
     <!-- Script JavaScript externo para funcionalidades interativas -->
     <script src="../assets/js/script.js"></script>
 </body>
+
 </html>
