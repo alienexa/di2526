@@ -122,7 +122,8 @@ nav ul {
     display: flex;
     list-style: none;
     gap: 22px;
-    flex-wrap: nowrap
+    flex-wrap: wrap;
+    justify-content: right;
 }
 
 nav ul li a {
@@ -173,7 +174,6 @@ nav ul li a:focus {
     width: 88px;
     height: 88px;
     border-radius: 50%;
-    overflow: hidden;
     background: #fff;
     border: 1px solid rgba(0, 0, 0, .06);
     box-shadow: 0 6px 18px rgba(0, 0, 0, .10);
@@ -181,13 +181,14 @@ nav ul li a:focus {
 }
 
 .logo img {
-    width: 100%;
+    min-width: 86px;
     height: 100%;
     object-fit: cover;
     display: block;
-    border-radius: 0;
+    border-radius: 50%;
     box-shadow: none;
-    background: transparent
+    background: transparent;
+
 }
 
 /* ============================================
@@ -474,12 +475,22 @@ footer {
 /* ============================================
    GRID DE MATÉRIAS (override: 3 colunas fixas)
 ============================================ */
+
 .trabalhos-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     align-items: stretch;
 }
+
+.trabalhos-flex {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
 
 @media (max-width:1024px) {
     .trabalhos-grid {
@@ -496,10 +507,16 @@ footer {
 /* ============================================
    AJUSTES DE CARDS / CONTAINERS
 ============================================ */
+.card-widith {
+    max-width: 380px;
+}
+
 .trabalho-card {
     display: flex;
     flex-direction: column;
-    height: 100%
+    height: 100%;
+    max-width: 380px;
+    row-gap: 10px;
 }
 
 .trabalho-card .trabalho-btn {
@@ -613,7 +630,18 @@ footer {
 }
 
 /* Tipografia/listas dentro das faces */
-.flip-card__face>h3,
+.flip-card__face>h3{
+    margin: 0 0 .25rem 0;
+    line-height: 1.25;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 30px;
+    margin-top: 65px;
+}
+
 .flip-card__face>h4 {
     margin: 0 0 .25rem 0;
     line-height: 1.25;
@@ -622,6 +650,10 @@ footer {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+.card-scroll{
+    overflow: auto;
 }
 
 .flip-card__face>p {
@@ -650,7 +682,6 @@ footer {
 .flip-card__face>ul,
 .flip-card__face>p:last-of-type {
     margin-bottom: 1rem;
-    overflow: auto;
     max-height: 40vh;
     padding-right: .25rem;
     -webkit-overflow-scrolling: touch;
@@ -885,4 +916,80 @@ footer {
     /* centro horizontal */
     margin-top: auto;
     /* fixa no fundo do card */
+}
+
+/* 5 cards → 3 em cima + 2 centrados em baixo */
+.trabalhos-grid.grid-5 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.trabalhos-grid.grid-5::before {
+    content: "";
+}
+
+/* “espaçador” col.1 da 2ª linha */
+
+@media (max-width: 1024px) {
+    .trabalhos-grid.grid-5 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .trabalhos-grid.grid-5 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* === Flip back: permitir SCROLL apenas no conteúdo === */
+
+/* A face continua a ser um flex container vertical */
+.flip-card__face {
+    display: flex;
+    flex-direction: column;
+    /* já tens padding/radius/etc. definidos */
+    overflow: hidden;
+    /* a face em si não rola */
+}
+
+/* Conteúdo rolável do verso (e também podes usar na frente, se quiseres) */
+.flip-card__content {
+    flex: 1 1 auto;
+    /* ocupa o espaço disponível */
+    min-height: 0;
+    /* ESSENCIAL para permitir scroll em flex */
+    overflow: auto;
+    /* o scroll acontece aqui */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    margin: .25rem 0 1rem 0;
+    /* respiro antes do botão */
+    padding-right: .25rem;
+    /* espaço para não colar na borda ao rolar */
+    overscroll-behavior: contain;
+    /* evita "passar" o scroll para a página */
+}
+
+/* Garante que o botão fica no fundo e centrado */
+.flip-card__face .flip-card__btn,
+.flip-card__face .trabalho-btn {
+    margin-top: auto;
+    /* fixa no fundo do card */
+    align-self: center;
+    /* centro horizontal */
+}
+
+/* Se não estiveres a usar <div class="flip-card__content"> no HTML,
+   aplica o comportamento rolável diretamente aos blocos finais do verso: */
+.flip-card__back>ul,
+.flip-card__back>ol,
+.flip-card__back>p:last-of-type {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    margin-bottom: 1rem;
+    padding-right: .25rem;
+    overscroll-behavior: contain;
 }
