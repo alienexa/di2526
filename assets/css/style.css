@@ -7,14 +7,14 @@
     --bg-body: #f8fafc;
     --text-main: #0f172a;
     --text-secondary: #475569;
-    --glass: rgba(255, 255, 255, 0.7);
-    --border-glass: rgba(255, 255, 255, 0.3);
+    --glass: rgba(255, 255, 255, .7);
+    --border-glass: rgba(255, 255, 255, .3);
     --focus-ring: #3b82f6;
     --accent: #db2777;
     --accent-secondary: #0891b2;
-    --duration: 0.4s;
-    --ease: cubic-bezier(0.34, 1.56, 0.64, 1);
-    --spacing-xs: 0.5rem;
+    --duration: .4s;
+    --ease: cubic-bezier(.34, 1.56, .64, 1);
+    --spacing-xs: .5rem;
     --spacing-sm: 1rem;
     --spacing-md: 1.5rem;
     --spacing-lg: 2rem;
@@ -28,7 +28,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 /* ============================================
@@ -37,22 +37,22 @@
 @keyframes slideInUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(30px)
     }
 
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0)
     }
 }
 
 @keyframes scaleUp {
     from {
-        transform: scale(1);
+        transform: scale(1)
     }
 
     to {
-        transform: scale(1.05);
+        transform: scale(1.05)
     }
 }
 
@@ -60,11 +60,11 @@
 
     0%,
     100% {
-        transform: translateY(0);
+        transform: translateY(0)
     }
 
     50% {
-        transform: translateY(-15px);
+        transform: translateY(-15px)
     }
 }
 
@@ -72,11 +72,11 @@
 
     0%,
     100% {
-        transform: scale(1);
+        transform: scale(1)
     }
 
     50% {
-        transform: scale(1.05);
+        transform: scale(1.05)
     }
 }
 
@@ -101,14 +101,12 @@ nav {
     padding: 12px 30px;
     margin: 20px auto 0;
 
-    /* vidro/blur */
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, .4);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
 
-    /* borda/sombra/raio */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.28);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .06);
+    border: 1px solid rgba(255, 255, 255, .28);
     border-radius: 50px;
 }
 
@@ -117,14 +115,14 @@ nav {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    gap: 20px;
+    gap: 20px
 }
 
 nav ul {
     display: flex;
     list-style: none;
     gap: 22px;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap
 }
 
 nav ul li a {
@@ -139,7 +137,7 @@ nav ul li a {
 
 nav ul li a:hover {
     color: var(--primary);
-    background: rgba(79, 70, 229, 0.15);
+    background: rgba(79, 70, 229, .15);
     border-radius: 20px;
     transform: translateY(-2px);
 }
@@ -157,12 +155,12 @@ nav ul li a::after {
 }
 
 nav ul li a:hover::after {
-    width: 70%;
+    width: 70%
 }
 
 nav ul li a:focus {
     outline: 3px solid var(--focus-ring);
-    outline-offset: 2px;
+    outline-offset: 2px
 }
 
 /* ============================================
@@ -173,27 +171,23 @@ nav ul li a:focus {
     align-items: center;
     justify-content: center;
     width: 88px;
-    /* tamanho fixo e quadrado */
     height: 88px;
     border-radius: 50%;
     overflow: hidden;
     background: #fff;
-    /* base sólida para não "vazar" gradiente */
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
+    border: 1px solid rgba(0, 0, 0, .06);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .10);
     padding: 0;
-    /* sem padding para não ovalizar */
 }
 
 .logo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* recorte proporcional */
     display: block;
     border-radius: 0;
     box-shadow: none;
-    background: transparent;
+    background: transparent
 }
 
 /* ============================================
@@ -203,7 +197,7 @@ header {
     text-align: center;
     margin-bottom: var(--spacing-2xl);
     padding: var(--spacing-xl) var(--spacing-lg);
-    animation: slideInUp 0.8s var(--ease);
+    animation: slideInUp .8s var(--ease);
 }
 
 header h1 {
@@ -233,78 +227,68 @@ header h1 {
     backdrop-filter: blur(5px);
     padding: var(--spacing-lg);
     border-radius: 20px;
-    border: 1px solid rgba(79, 70, 229, 0.15);
-    box-shadow: 0 8px 12px -2px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(79, 70, 229, .15);
+    box-shadow: 0 8px 12px -2px rgba(0, 0, 0, .06);
     display: flex;
     flex-direction: column;
     height: 100%;
     position: relative;
     transition: all var(--duration) var(--ease);
-    animation: slideInUp 0.8s var(--ease);
+    animation: slideInUp .8s var(--ease);
     margin-bottom: 1.2rem;
-    /* espaçamento inferior */
     text-align: center;
-    /* centraliza título e texto */
 }
 
 .trabalho-card .trabalho-btn {
-    align-self: center;
+    align-self: center
 }
 
-.card:hover,
-.trabalho-card:hover {
-    transform: translateY(-12px) scale(1.02);
-    box-shadow: 0 25px 40px -5px rgba(79, 70, 229, 0.22);
+.flip-card:hover {
+    transform: none !important;
 }
 
-/* Quadrado do topo (removido visualmente) */
+.flip-card {
+    transform-style: preserve-3d;
+}
+
+
 .card-icon {
-    display: none !important;
-    width: 60px;
-    height: 60px;
-    margin: 0 auto var(--spacing-md);
-    border-radius: 12px;
-    background: rgba(79, 70, 229, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: gentlePulse 3s ease-in-out infinite;
+    display: none !important
 }
 
-.work-card-number {
-    font-size: 28px;
-    font-weight: 800;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+/* remove ícone do topo */
 
-/* Botão do card */
+/* Botões padrão */
 .trabalho-btn {
     margin-top: auto;
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: #fff;
     text-decoration: none;
     font-weight: 600;
-    padding: 0.75rem 1.75rem;
+    padding: .75rem 1.75rem;
     border-radius: 10px;
     display: inline-block;
     transition: all var(--duration) var(--ease);
+    min-height: 44px;
 }
 
 .trabalho-btn:hover {
     transform: translateY(-4px) scale(1.03);
-    box-shadow: 0 12px 28px rgba(79, 70, 229, 0.45);
+    box-shadow: 0 12px 28px rgba(79, 70, 229, .45)
+}
+
+.trabalho-btn:focus {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 2px
 }
 
 /* ============================================
    FOOTER
 ============================================ */
-
 footer,
 .footer-container,
 .footer-section {
-    text-align: center;
+    text-align: center
 }
 
 footer {
@@ -312,7 +296,7 @@ footer {
     backdrop-filter: blur(10px);
     padding: var(--spacing-xl) var(--spacing-lg);
     margin-top: var(--spacing-2xl);
-    border-top: 1px solid rgba(79, 70, 229, 0.15);
+    border-top: 1px solid rgba(79, 70, 229, .15);
 }
 
 .footer-container {
@@ -325,12 +309,12 @@ footer {
 
 .footer-section h3 {
     color: var(--primary);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-md)
 }
 
 .footer-section p {
     color: var(--text-secondary);
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm)
 }
 
 /* ============================================
@@ -340,9 +324,7 @@ footer {
     display: flex;
     gap: 20px;
     margin-top: 15px;
-    justify-content: center;
-}
-
+    justify-content: center
 }
 
 .social-links a {
@@ -351,7 +333,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(79, 70, 229, 0.1);
+    background: rgba(79, 70, 229, .1);
     color: var(--primary);
     border-radius: 50%;
     transition: all var(--duration) var(--ease);
@@ -360,7 +342,7 @@ footer {
 .social-links a:hover {
     transform: scale(1.2) rotate(8deg);
     background: linear-gradient(135deg, var(--primary), var(--accent));
-    color: #fff;
+    color: #fff
 }
 
 /* ============================================
@@ -368,13 +350,12 @@ footer {
 ============================================ */
 .hamburger {
     display: none;
-    /* escondido no desktop */
     flex-direction: column;
     gap: 5px;
     width: 35px;
     background: none;
     border: none;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .hamburger span {
@@ -383,20 +364,19 @@ footer {
     height: 4px;
     background: var(--text-main);
     border-radius: 5px;
-    transition: 0.3s ease;
+    transition: .3s ease
 }
 
-/* animação X */
 .hamburger.active span:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
+    transform: translateY(9px) rotate(45deg)
 }
 
 .hamburger.active span:nth-child(2) {
-    opacity: 0;
+    opacity: 0
 }
 
 .hamburger.active span:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
+    transform: translateY(-9px) rotate(-45deg)
 }
 
 /* ============================================
@@ -406,26 +386,23 @@ footer {
     position: fixed;
     top: 0;
     left: -270px;
-    /* escondida */
     width: 270px;
     height: 100vh;
-    background: #ffffff;
-    box-shadow: 4px 0 18px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    box-shadow: 4px 0 18px rgba(0, 0, 0, .1);
     padding: 30px 20px;
-    transition: left 0.35s ease;
+    transition: left .35s ease;
     z-index: 999;
 }
 
 .sidebar.open {
-    left: 0;
+    left: 0
 }
-
-/* aparece */
 
 .sidebar-menu {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 20px
 }
 
 .sidebar-menu a {
@@ -434,90 +411,88 @@ footer {
     color: var(--text-main);
     text-decoration: none;
     padding-bottom: 5px;
-    transition: 0.2s;
     border-bottom: 2px solid transparent;
+    transition: .2s;
 }
 
 .sidebar-menu a:hover {
     color: var(--primary);
-    border-bottom: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary)
 }
 
 /* ============================================
    MEDIA QUERIES (menu/mobile base)
 ============================================ */
-@media (max-width: 900px) {
+@media (max-width:900px) {
     nav ul {
-        display: none;
+        display: none
     }
 
-    /* esconde o menu normal */
     .hamburger {
-        display: flex;
+        display: flex
     }
 
-    /* mostra botão */
     .nav-container {
-        justify-content: space-between;
+        justify-content: space-between
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width:900px) {
     nav {
-        max-width: 95%;
+        max-width: 95%
     }
 
-    .logo img {
-        height: 50px;
+    .logo {
+        width: 76px;
+        height: 76px
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width:600px) {
     nav {
         padding: 12px 16px;
-        border-radius: 30px;
+        border-radius: 30px
     }
 
     .nav-container {
         flex-direction: column;
-        gap: 12px;
+        gap: 12px
     }
 
     nav ul {
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: center
+    }
+
+    .logo {
+        width: 72px;
+        height: 72px
     }
 
     .grid-trabalhos {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr
     }
 }
 
 /* ============================================
    GRID DE MATÉRIAS (override: 3 colunas fixas)
-   - Mantido DEPOIS do grid base para prevalecer.
 ============================================ */
 .trabalhos-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* 3 colunas fixas no desktop */
     gap: 1.5rem;
-    /* espaçamento entre cards */
     align-items: stretch;
-    /* alturas consistentes */
 }
 
-/* Tablet (até ~1024px): 2 colunas */
-@media (max-width: 1024px) {
+@media (max-width:1024px) {
     .trabalhos-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr)
     }
 }
 
-/* Mobile (até ~640px): 1 coluna */
-@media (max-width: 640px) {
+@media (max-width:640px) {
     .trabalhos-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr
     }
 }
 
@@ -527,20 +502,17 @@ footer {
 .trabalho-card {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 100%
 }
 
 .trabalho-card .trabalho-btn {
-    margin-top: auto;
+    margin-top: auto
 }
 
-/* Limita a largura total da secção e centraliza */
 .container .trabalhos-grid,
 .trabalhos-container .trabalhos-grid {
     max-width: 1200px;
-    /* opcional: 1100–1200px */
-    margin-inline: auto;
-    /* centraliza */
+    margin-inline: auto
 }
 
 /* ============================================
@@ -552,21 +524,203 @@ footer {
     margin: 2rem auto 1.5rem;
     max-width: 100%;
     text-align: center;
-    /* centraliza sempre */
-
-    /* Gradiente igual aos botões */
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-
-    letter-spacing: -0.5px;
-    /* presença */
+    letter-spacing: -.5px;
 }
 
-/* Garantir que o container não força alinhamento à esquerda */
 .section-title-wrapper,
 .container,
 .trabalhos-container {
+    text-align: center
+}
+
+/* ============================================
+   FLIP CARDS — sem rotação por hover; só click (JS)
+============================================ */
+.flip-grid {
+    perspective: 1200px
+}
+
+.flip-card {
+    position: relative;
+    height: 100%
+}
+
+.flip-card__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform var(--duration) var(--ease);
+    border-radius: 20px;
+    outline: none;
+    will-change: transform;
+}
+
+/* Faces */
+.flip-card__face {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: .75rem;
+    padding: var(--spacing-lg);
+    border-radius: 20px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, .06);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.flip-card__front {
+    transform: rotateY(0deg)
+}
+
+.flip-card__back {
+    transform: rotateY(180deg)
+}
+
+/* ÚNICA forma de rodar: classe do JS */
+.flip-card__inner.is-flipped {
+    transform: rotateY(180deg) !important
+}
+
+/* Alturas mínimas para estabilidade */
+@media (min-width:1201px) {
+    .flip-card {
+        min-height: 360px
+    }
+}
+
+@media (max-width:1200px) {
+    .flip-card {
+        min-height: 340px
+    }
+}
+
+@media (max-width:1024px) {
+    .flip-card {
+        min-height: 320px
+    }
+}
+
+@media (max-width:640px) {
+    .flip-card {
+        min-height: 300px
+    }
+}
+
+/* Tipografia/listas dentro das faces */
+.flip-card__face>h3,
+.flip-card__face>h4 {
+    margin: 0 0 .25rem 0;
+    line-height: 1.25;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.flip-card__face>p {
+    margin: 0 0 .25rem 0;
+    color: var(--text-secondary)
+}
+
+.flip-card__face ul {
+    list-style: disc inside;
+    display: grid;
+    gap: .5rem;
+    text-align: left;
+    margin: .25rem auto 0;
+    max-width: 40ch;
+}
+
+.flip-card__face li {
+    line-height: 1.55
+}
+
+.flip-card__face li strong {
+    color: var(--text-main)
+}
+
+/* Conteúdo alto: scroll local sem empurrar o botão */
+.flip-card__face>ul,
+.flip-card__face>p:last-of-type {
+    margin-bottom: 1rem;
+    overflow: auto;
+    max-height: 40vh;
+    padding-right: .25rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+}
+
+/* Botões no fundo (frente e verso) */
+.flip-card__face .trabalho-btn,
+.flip-card__face .flip-card__btn {
+    margin-top: auto;
+    align-self: center;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    text-decoration: none;
     text-align: center;
+    border-radius: 12px;
+    padding: .85rem 1.6rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease), filter var(--duration) var(--ease);
+    box-shadow: 0 6px 16px rgba(79, 70, 229, .25);
+}
+
+.flip-card__face .trabalho-btn:focus,
+.flip-card__face .flip-card__btn:focus {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 2px
+}
+
+/* Botão full-width em mobile (opcional) */
+@media (max-width:640px) {
+    .flip-card__face .flip-card__btn {
+        align-self: stretch
+    }
+}
+
+/* Touch: impedir flip por hover (garantia extra) */
+@media (hover:none) {
+    .flip-card__inner:hover {
+        transform: none
+    }
+}
+
+/* Acessibilidade: reduzir movimento */
+@media (prefers-reduced-motion:reduce) {
+    .flip-card__inner {
+        transition: none !important;
+        transform: none !important
+    }
+
+    .flip-card__front,
+    .flip-card__back {
+        position: static;
+        transform: none;
+        box-shadow: none;
+        border: 0
+    }
+}
+
+/* 🔒 Quando está virado, NADA pode alterar o transform */
+.flip-card__inner.is-flipped,
+.flip-card__inner.is-flipped:hover,
+.flip-card__inner.is-flipped:focus {
+    transform: rotateY(180deg) !important;
 }
