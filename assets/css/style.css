@@ -721,3 +721,168 @@ footer {
 .flip-card__inner.is-flipped:focus {
     transform: rotateY(180deg) !important;
 }
+
+/* ===== TABELA RESPONSIVA/ACESSÍVEL ===== */
+.table-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto var(--spacing-2xl);
+    overflow-x: auto;
+    /* scroll horizontal se necessário */
+    -webkit-overflow-scrolling: touch;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .06);
+    padding: 8px;
+    /* moldura fina à volta da tabela */
+}
+
+.ui-table {
+    width: 100%;
+    border-collapse: separate;
+    /* para radius nos cantos */
+    border-spacing: 0;
+    background: #fff;
+    border: 1px solid rgba(79, 70, 229, .18);
+    border-radius: 12px;
+    overflow: hidden;
+    /* aplica o radius ao conteúdo */
+    font-size: clamp(.95rem, 1.8vw, 1rem);
+}
+
+.ui-table thead th {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #fff;
+    text-align: left;
+    font-weight: 800;
+    padding: 14px 16px;
+    border-right: 1px solid rgba(255, 255, 255, .25);
+}
+
+.ui-table thead th:last-child {
+    border-right: none;
+}
+
+.ui-table tbody th[scope="row"],
+.ui-table tbody td {
+    padding: 14px 16px;
+    vertical-align: top;
+    color: var(--text-main);
+    border-top: 1px solid rgba(79, 70, 229, .15);
+    border-right: 1px solid rgba(79, 70, 229, .10);
+}
+
+.ui-table tbody td:last-child,
+.ui-table tbody th[scope="row"]:last-child {
+    border-right: none;
+}
+
+/* enfatizar texto relevante (como no exemplo) */
+.ui-table tbody td strong {
+    color: var(--primary);
+    font-weight: 800;
+}
+
+/* zebra leve para leitura */
+.ui-table tbody tr:nth-child(odd) {
+    background: rgba(79, 70, 229, .03);
+}
+
+/* mobile: permitir quebra suave do texto longo */
+@media (max-width: 640px) {
+
+    .ui-table thead th,
+    .ui-table tbody th[scope="row"],
+    .ui-table tbody td {
+        padding: 12px 12px;
+        word-break: break-word;
+    }
+}
+
+/* utilitário de acessibilidade */
+.sr-only {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+
+/* ===============================
+   1) CENTRAR A GRElha NO ECRÃ
+   =============================== */
+
+/* Grelhas normais: centra o “bloco” da grid no container */
+.trabalhos-grid {
+    justify-content: center;
+    /* centra a grid quando sobra espaço lateral */
+}
+
+/* Quando a secção tiver APENAS 2 cards e quiseres manter 2 colunas centradas,
+   adiciona a classe grid-center-2 ao wrapper:
+   <div class="trabalhos-grid flip-grid grid-center-2">…</div>  */
+.trabalhos-grid.grid-center-2 {
+    grid-template-columns: repeat(2, minmax(300px, 420px));
+    justify-content: center;
+}
+
+/* Responsivo para 2 cards: 1 coluna no mobile */
+@media (max-width: 640px) {
+    .trabalhos-grid.grid-center-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Se quiseres 3 em cima e 2 em baixo (5 cards) na index,
+   usa a classe grid-5 que já combinámos. Mantém-se compatível. */
+
+
+/* =====================================
+   2) CENTRAR TEXTO DENTRO DOS CARDS
+   (frente e verso dos flip-cards)
+   ===================================== */
+
+/* O card já usa flex-col. Vamos centralizar o conteúdo textual
+   e manter o botão no fundo (margin-top:auto). */
+.flip-card__face {
+    align-items: center;
+    /* centra horizontalmente o conteúdo */
+    text-align: center;
+    /* centra o texto */
+    /* já tens: display:flex; flex-direction:column; */
+}
+
+/* Garantir que títulos, parágrafos e listas ficam centrados
+   (larguras fluídas sem colar nas laterais) */
+.flip-card__face>h3,
+.flip-card__face>h4,
+.flip-card__face>p,
+.flip-card__face>ul,
+.flip-card__face>ol {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Se estiveres a usar .flip-card__content para blocos longos,
+   este truque centra verticalmente o TEXTO e mantém o botão no fundo */
+.flip-card__content {
+    margin-top: auto;
+    /* empurra o início do bloco para ao centro… */
+    margin-bottom: auto;
+    /* …e o fim também, ficando verticalmente centrado */
+    /* continua com o max-height/overflow que já tens para scroll */
+}
+
+/* Botão continua centrado e no rodapé do card */
+.flip-card__face .trabalho-btn,
+.flip-card__face .flip-card__btn {
+    align-self: center;
+    /* centro horizontal */
+    margin-top: auto;
+    /* fixa no fundo do card */
+}
