@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <!-- Meta tags: configuração do charset e responsividade -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Portfólio de Design de Interfaces.">
+    <meta name="description" content="Portfólio de Design de Interfaces.">
     <meta name="theme-color" content="#6366f1">
 
     <!-- Título da página exibido na aba do navegador -->
@@ -22,6 +22,7 @@
     <!-- Link para folha de estilos CSS externa -->
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+
 <body>
     <!-- Navegação principal do site com role semântico -->
     <nav aria-label="Navegação principal">
@@ -52,29 +53,162 @@
     </nav>
 
     <aside id="sidebar" class="sidebar">
-    <nav class="sidebar-menu">
-        <a href="../index.html">Início</a>
-        <a href="pagina1.html">Introdução ao Design</a>
-        <a href="pagina2.html">Composição Visual</a>
-        <a href="pagina3.html">Tipos e Formatos</a>
-        <a href="pagina4.html">Espaço Negativo</a>
-        <a href="pagina5.html">Tendências Visuais</a>
-        <a href="pagina6.html">Acessibilidade</a>
-    </nav>
+        <nav class="sidebar-menu">
+            <a href="../index.html">Início</a>
+            <a href="pagina1.html">Introdução ao Design</a>
+            <a href="pagina2.html">Composição Visual</a>
+            <a href="pagina3.html">Tipos e Formatos</a>
+            <a href="pagina4.html">Espaço Negativo</a>
+            <a href="pagina5.html">Tendências Visuais</a>
+            <a href="pagina6.html">Acessibilidade</a>
+        </nav>
     </aside>
     <!-- Seção de cabeçalho (header) com título e descrição -->
     <header role="banner">
         <!-- Título principal da página -->
         <h1>Este é o meu portfolio de trabalhos de Design de Interfaces</h1>
         <!-- Descrição do conteúdo do portfólio -->
-        <p>Sinta-se à vontade para explorar os meus trabalhos desenvolvidos. Eu sou a Alexandra e estes foram os trabalhos que desenvolvi ao longo da unidade curricular de Design de Interfaces.</p>
+        <p>Sinta-se à vontade para explorar os meus trabalhos desenvolvidos. Eu sou a Alexandra e estes foram os
+            trabalhos que desenvolvi ao longo da unidade curricular de Design de Interfaces.</p>
     </header>
     <!-- Seção principal com conteúdo da página -->
     <main class="container" role="main" aria-label="Conteúdo principal">
 
+        <section class="container" aria-labelledby="topicos-titulo">
+            <h1 id="topicos-titulo" class="titulo-principal">Composição, Hierarquia e Cores</h1>
 
+            <div class="trabalhos-grid flip-grid" role="list">
+                <!-- Card 1 -->
+                <article class="flip-card" role="listitem">
+                    <div class="flip-card__inner" tabindex="0"
+                        aria-label="Ver detalhes de Princípios de composição visual">
+                        <div class="flip-card__face flip-card__front">
+                            <h3>Princípios de composição visual</h3>
+                            <p>Arranjo intencional de elementos para criar unidade harmoniosa e eficaz.</p>
+                            <button class="trabalho-btn flip-card__btn" aria-hidden="true" tabindex="-1">Ver
+                                mais</button>
+                        </div>
+                        <div class="flip-card__face flip-card__back">
+                            <h4>Princípios</h4>
+                            <ul>
+                                <li><strong>Equilíbrio:</strong> simétrico, radial.</li>
+                                <li><strong>Contraste:</strong> cor, tamanho, claro-escuro, textura.</li>
+                                <li><strong>Alinhamento:</strong> horizontal, vertical, grelha, centralizado,
+                                    justificado.</li>
+                            </ul>
+                            <button class="trabalho-btn flip-card__btn" aria-label="Voltar">Voltar</button>
+                        </div>
+                    </div>
+                </article>
 
+                <!-- Card 2 -->
+                <article class="flip-card" role="listitem">
+                    <div class="flip-card__inner" tabindex="0" aria-label="Ver detalhes de Grids e malhas">
+                        <div class="flip-card__face flip-card__front">
+                            <h3>Grids e malhas no design</h3>
+                            <p>Estruturas invisíveis que alinham e dão consistência e responsividade.</p>
+                            <button class="trabalho-btn flip-card__btn" aria-hidden="true" tabindex="-1">Ver
+                                mais</button>
+                        </div>
+                        <div class="flip-card__face flip-card__back">
+                            <h4>Tipos de grid</h4>
+                            <ul>
+                                <li>Manuscrito</li>
+                                <li>Colunas</li>
+                                <li>Modular</li>
+                                <li>Hierárquico</li>
+                            </ul>
+                            <button class="trabalho-btn flip-card__btn" aria-label="Voltar">Voltar</button>
+                        </div>
+                    </div>
+                </article>
 
+                <!-- Card 3 -->
+                <article class="flip-card" role="listitem">
+                    <div class="flip-card__inner" tabindex="0" aria-label="Ver detalhes de Hierarquia visual">
+                        <div class="flip-card__face flip-card__front">
+                            <h3>Hierarquia visual</h3>
+                            <p>Padrões de leitura (F/Z), destaque, CTAs, espaço em branco, tipografia.</p>
+                            <button class="trabalho-btn flip-card__btn" aria-hidden="true" tabindex="-1">Ver
+                                mais</button>
+                        </div>
+                        <div class="flip-card__face flip-card__back">
+                            <h4>Práticas</h4>
+                            <ul>
+                                <li><strong>Destaque:</strong> tamanho, cor, posição.</li>
+                                <li><strong>CTAs:</strong> visualmente distintos.</li>
+                                <li><strong>Espaço em branco:</strong> guia o foco.</li>
+                                <li><strong>Tipografia:</strong> níveis claros.</li>
+                            </ul>
+                            <button class="trabalho-btn flip-card__btn" aria-label="Voltar">Voltar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="flip-card" role="listitem">
+                    <div class="flip-card__inner" tabindex="0" aria-label="Ver detalhes de UX e UI">
+                        <div class="flip-card__face flip-card__front">
+                            <h3>Conceito de UX e UI</h3>
+                            <p>UI = interface e visual; UX = experiência e fluidez.</p>
+                            <button class="trabalho-btn flip-card__btn" aria-hidden="true" tabindex="-1">Ver
+                                mais</button>
+                        </div>
+                        <div class="flip-card__face flip-card__back">
+                            <h4>Complementares</h4>
+                            <ul>
+                                <li><strong>UX:</strong> necessidades, fluxos, usabilidade.</li>
+                                <li><strong>UI:</strong> pixels, componentes, estilo.</li>
+                                <li>Trabalho conjunto → produto coerente.</li>
+                            </ul>
+                            <button class="trabalho-btn flip-card__btn" aria-label="Voltar">Voltar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="flip-card" role="listitem">
+                    <div class="flip-card__inner" tabindex="0" aria-label="Ver detalhes de Teoria das cores">
+                        <div class="flip-card__face flip-card__front">
+                            <h3>Teoria das cores</h3>
+                            <p>Harmonias, contrastes, psicologia e consistência cromática.</p>
+                            <button class="trabalho-btn flip-card__btn" aria-hidden="true" tabindex="-1">Ver
+                                mais</button>
+                        </div>
+                        <div class="flip-card__face flip-card__back">
+                            <h4>Essenciais</h4>
+                            <ul>
+                                <li>Harmonias: mono, análoga, complementar, triádica…</li>
+                                <li>Contraste: cor, luz, saturação, temperatura.</li>
+                                <li>Psicologia e marca: coerência e padrões.</li>
+                            </ul>
+                            <button class="trabalho-btn flip-card__btn" aria-label="Voltar">Voltar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 6 -->
+                <article class="flip-card" role="listitem">
+                    <div class="flip-card__inner" tabindex="0" aria-label="Ver detalhes de Acessibilidade e cores">
+                        <div class="flip-card__face flip-card__front">
+                            <h3>Acessibilidade & cores</h3>
+                            <p>Contraste, princípios WCAG e não depender só da cor.</p>
+                            <button class="trabalho-btn flip-card__btn" aria-hidden="true" tabindex="-1">Ver
+                                mais</button>
+                        </div>
+                        <div class="flip-card__face flip-card__back">
+                            <h4>Boas práticas</h4>
+                            <ul>
+                                <li>Contraste: ≥ 4.5:1 (texto normal) e 3:1 (texto grande).</li>
+                                <li>POUR: Percetível, Operável, Compreensível, Robusto.</li>
+                                <li>Combinar cor com ícones/estados textuais.</li>
+                            </ul>
+                            <button class="trabalho-btn flip-card__btn" aria-label="Voltar">Voltar</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
     <!-- Rodapé da página com informações e links -->
     <footer role="contentinfo" aria-label="Informações do rodapé">
@@ -137,4 +271,5 @@
     <!-- Script JavaScript externo para funcionalidades interativas -->
     <script src="../assets/js/script.js"></script>
 </body>
+
 </html>
