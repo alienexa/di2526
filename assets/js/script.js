@@ -498,6 +498,24 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+
+const menuToggle = document.getElementById("menu-toggle");
+const sidebar = document.getElementById("sidebar");
+
+menuToggle.addEventListener("click", () => {
+    menuToggle.classList.toggle("active");
+    sidebar.classList.toggle("open");
+});
+
+// fecha sidebar ao clicar num link
+document.querySelectorAll(".sidebar-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+        sidebar.classList.remove("open");
+        menuToggle.classList.remove("active");
+    });
+});
+
+
 /* ===== INICIALIZAÇÃO ===== */
 /* Carregar preferências salvas ao iniciar a página */
 loadAccessibilityPreferences();
