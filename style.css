@@ -33,7 +33,7 @@ body {
 }
 
 /* ===========================
-   HEADER
+   HEADER + MENU
 =========================== */
 
 header {
@@ -48,6 +48,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .logo {
@@ -74,8 +75,86 @@ nav {
     text-decoration: underline;
 }
 
+/* Botão hamburguer */
 .menu-toggle {
     display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    z-index: 20;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.menu-toggle.active .top {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active .middle {
+    opacity: 0;
+}
+
+.menu-toggle.active .bottom {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ===========================
+   BANNER
+=========================== */
+
+.banner-overlay {
+    position: relative;
+    height: 420px;
+    width: 100%;
+    border-radius: 0;
+    overflow: hidden;
+    margin: 0;
+    z-index: 0;
+}
+
+.banner-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.banner-overlay::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+}
+
+.banner-overlay-conteudo {
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    color: white;
+    z-index: 2;
+}
+
+.banner-overlay-conteudo h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.banner-overlay-conteudo p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    opacity: 0.95;
 }
 
 /* ===========================
@@ -85,62 +164,40 @@ nav {
 .conteudo {
     max-width: 1200px;
     margin: auto;
-    padding: var(--espaco);
-}
-
-.secao {
-    margin-bottom: 3rem;
-}
-
-.secao h2 {
-    color: var(--cor-primaria);
-    margin-bottom: 1rem;
-}
-
-.secao h3 {
-    margin-top: 1rem;
-    color: var(--cor-secundaria);
+    padding: 0 var(--espaco);
 }
 
 /* ===========================
-   IMAGENS
+   LAYOUT DUPLO
 =========================== */
 
-figure {
-    margin: 1.5rem 0;
-    text-align: center;
+.layout-duplo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    margin: 4rem 0;
 }
 
-figure img {
-    max-width: 100%;
+.layout-duplo.invertido {
+    flex-direction: row-reverse;
+}
+
+.coluna-esquerda,
+.coluna-direita {
+    flex: 1 1 45%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.coluna-direita img {
+    width: 100%;
     height: auto;
     border-radius: var(--radius);
     display: block;
-    margin: auto;
-}
-
-figcaption {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-    color: #555;
-}
-
-.imagem-grande img {
-    max-width: 900px;
-}
-
-/* ===========================
-   HERO
-=========================== */
-
-.hero {
-    text-align: center;
-    padding: 3rem 1rem;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    color: var(--cor-primaria);
 }
 
 /* ===========================
@@ -161,23 +218,70 @@ figcaption {
 
 @media (max-width: 768px) {
 
+    .menu-toggle {
+        display: block;
+    }
+
     .menu {
-        display: none;
         flex-direction: column;
         background: var(--cor-primaria);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        padding: 0;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.3s ease;
+    }
+
+    .menu.show {
+        max-height: 500px;
+        opacity: 1;
+    }
+
+    .menu a {
         padding: 1rem;
     }
 
-    .menu-toggle {
-        display: block;
-        background: var(--cor-secundaria);
-        color: white;
-        border: none;
-        padding: 0.5rem 1rem;
-        border-radius: var(--radius);
+    .banner-overlay {
+        height: 250px;
     }
 
-    .hero h1 {
-        font-size: 2rem;
+    .banner-overlay-conteudo {
+        bottom: 1rem;
+        left: 1rem;
+    }
+
+    .banner-overlay-conteudo h1 {
+        font-size: 1.8rem;
+    }
+
+    .banner-overlay-conteudo p {
+        font-size: 1rem;
+    }
+
+    .layout-duplo,
+    .layout-duplo.invertido {
+        flex-direction: column;
+    }
+
+    .coluna-esquerda,
+    .coluna-direita {
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .coluna-direita {
+        order: -1;
+    }
+
+    .coluna-esquerda ul {
+        text-align: left;
     }
 }
