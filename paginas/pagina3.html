@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <!-- Meta tags: configuração do charset e responsividade -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Portfólio de Design de Interfaces.">
+    <meta name="description" content="Portfólio de Design de Interfaces.">
     <meta name="theme-color" content="#6366f1">
 
     <!-- Título da página exibido na aba do navegador -->
@@ -17,17 +17,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Favicon (ícone da aba) -->
-    <link rel="icon" href="../assets/img/logo.png" type="Logo">
+    <link rel="icon" href="assets/img/logo.png" type="Logo">
 
     <!-- Link para folha de estilos CSS externa -->
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+
 <body>
     <!-- Navegação principal do site com role semântico -->
     <nav aria-label="Navegação principal">
         <div class="nav-container">
             <!-- Logo do portfólio com link para página inicial -->
-            <a class="logo" href="index.html" aria-label="Portfólio de Design - Ir para página inicial">
+            <a class="logo" href="../index.html" aria-label="Portfólio de Design - Ir para página inicial">
                 <img src="../assets/img/logo.png" alt="Logotipo">
             </a>
 
@@ -42,38 +43,164 @@
             <ul role="menubar">
                 <li role="none"><a href="../index.html" role="menuitem">Início</a></li>
                 <li role="none"><a href="pagina1.html" role="menuitem">Introdução ao Design</a></li>
-                <li role="none"><a href="pagina2.html" role="menuitem">Composição Visual</a></li>
-                <li role="none"><a href="pagina3.html" role="menuitem">Tipos e Formatos</a></li>
-                <li role="none"><a href="pagina4.html" role="menuitem">Espaço Negativo</a></li>
-                <li role="none"><a href="pagina5.html" role="menuitem">Tendencias Visuais </a></li>
-                <li role="none"><a href="pagina6.html" role="menuitem">Acessibilidade</a></li>
+                <li role="none"><a href="pagina2.html" role="menuitem">Tipos e Formatos de Imagem</a></li>
+                <li role="none"><a href="pagina3.html" role="menuitem">Espaço Negativo</a></li>
+                <li role="none"><a href="pagina4.html" role="menuitem">Tendencias Visuais Atuais</a></li>
+                <li role="none"><a href="pagina5.html" role="menuitem">WCAG 2.1 e Acessibilidade </a></li>
             </ul>
         </div>
     </nav>
 
     <aside id="sidebar" class="sidebar">
-    <nav class="sidebar-menu">
-        <a href="../index.html">Início</a>
-        <a href="pagina1.html">Introdução ao Design</a>
-        <a href="pagina2.html">Composição Visual</a>
-        <a href="pagina3.html">Tipos e Formatos</a>
-        <a href="pagina4.html">Espaço Negativo</a>
-        <a href="pagina5.html">Tendências Visuais</a>
-        <a href="pagina6.html">Acessibilidade</a>
-    </nav>
+        <nav class="sidebar-menu">
+            <a href="../index.html">Início</a>
+            <a href="pagina1.html">Introdução ao Design</a>
+            <a href="pagina2.html">Tipos e Formatos de Imagem</a>
+            <a href="pagina3.html">Espaço Negativo</a>
+            <a href="pagina4.html">Tendencias Visuais Atuais</a>
+            <a href="pagina5.html">WCAG 2.1 e Acessibilidade</a>
+        </nav>
     </aside>
+
     <!-- Seção de cabeçalho (header) com título e descrição -->
     <header role="banner">
         <!-- Título principal da página -->
-        <h1>Este é o meu portfolio de trabalhos de Design de Interfaces</h1>
-        <!-- Descrição do conteúdo do portfólio -->
-        <p>Sinta-se à vontade para explorar os meus trabalhos desenvolvidos. Eu sou a Alexandra e estes foram os trabalhos que desenvolvi ao longo da unidade curricular de Design de Interfaces.</p>
+        <h1>Tipos e Formatos de Imagem</h1>
     </header>
     <!-- Seção principal com conteúdo da página -->
+        <!-- Seção principal com conteúdo da página -->
     <main class="container" role="main" aria-label="Conteúdo principal">
+        <section class="container" aria-labelledby="p3-titulo">
+            <h1 id="p3-titulo" class="titulo-principal">Estética, Consistência e Micro‑interações</h1>
 
+            <!-- 5 cards → 3 em cima + 2 em baixo (grid-5) -->
+            <div class="trabalhos-grid flip-grid grid-5" role="list">
 
+                <!-- Card 1 — Espaço Negativo -->
+                <article class="flip-card" role="listitem">
+                    <div class="flip-card__inner">
+                        <div class="flip-card__face flip-card__front">
+                            <h3>O Espaço Negativo</h3>
+                            <button class="trabalho-btn flip-card__btn" aria-label="Ver mais sobre Espaço Negativo">Ver mais</button>
+                        </div>
+                        <div class="flip-card__face flip-card__back">
+                            <h4>Espaço Negativo</h4>
+                            <div class="card-scroll">
+                                <p>O espaço negativo é a área vazia intencional entre elementos e é considerado uma ferramenta estratégica essencial.</p>
+                                <ul>
+                                    <li><strong>Funções:</strong> reduz ruído, cria organização, melhora legibilidade,
+                                        guia a atenção.</li>
+                                    <li><strong>Tipos:</strong>
+                                        <ul>
+                                            <li><em>Ativo</em>: adicionado para separar secções/dar destaque.</li>
+                                            <li><em>Passivo</em>: surge naturalmente entre palavras/linhas/colunas.</li>
+                                            <li><em>Micro</em>: micro‑espaços tipográficos para clareza.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Aplicação:</strong> consistência em margens, paddings e ao redor de blocos.</li>
+                                </ul>
+                            </div>
+                            <button class="trabalho-btn flip-card__btn" aria-label="Voltar">Voltar</button>
+                        </div>
+                    </div>
+                </article>
 
+                <!-- Card 2 — Minimalismo e Funcionalidade -->
+                <article class="flip-card" role="listitem">
+                    <div class="flip-card__inner">
+                        <div class="flip-card__face flip-card__front">
+                            <h3>Minimalismo &amp; Funcionalidade</h3>
+                            
+                            <button class="trabalho-btn flip-card__btn" aria-label="Ver mais sobre Minimalismo">Ver
+                                mais</button>
+                        </div>
+                        <div class="flip-card__face flip-card__back">
+                            <h4>Minimalismo que serve</h4>
+                            <div class="flip-card__content">
+                                <p>O design minimalista foca-se em remover o supérfluo para manter apenas o conteúdo e a ação principal.</p>
+                                <ul>
+                                    <li><strong>Princípios:</strong> paletas e ícones reduzidos, tipografia rigorosa, espaço negativo como estrutura.</li>
+                                    <li><strong>Objetivo:</strong> harmonia, clareza e eficácia com formas simples e paletas neutras.</li>
+                                </ul>
+                            </div>
+                            <button class="trabalho-btn flip-card__btn" aria-label="Voltar">Voltar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 — Identidade Visual e Consistência -->
+                <article class="flip-card" role="listitem">
+                    <div class="flip-card__inner">
+                        <div class="flip-card__face flip-card__front">
+                            <h3>Identidade &amp; Consistência</h3>
+                            <button class="trabalho-btn flip-card__btn"
+                                aria-label="Ver mais sobre Identidade e Consistência">Ver mais</button>
+                        </div>
+                        <div class="flip-card__face flip-card__back">
+                            <h4>Design System</h4>
+                            <div class="flip-card__content">
+                                <p>A consistência não é repetição, mas sim confiabilidade, permitindo que o utilizador reconheça a marca instantaneamente e reduza a sua carga cognitiva.</p>
+                                <ul>
+                                    <li><strong>Style Guide:</strong>  Documento que centraliza as regras de paleta de cores, tipografia, iconografia, componentes e grids.</li>
+                                    <li><strong>Processo:</strong> pInclui pesquisa, criação de um Moodboard, definição de elementos e implementação em todos os pontos de contacto.</li>
+                                    <li><strong>Multiplataforma:</strong> A identidade deve ser adaptável, utilizando grids responsivos para que o layout se ajuste a telemóveis, tablets e computadores sem perder a sua essência</li>
+                                </ul>
+                            </div>
+                            <button class="trabalho-btn flip-card__btn" aria-label="Voltar">Voltar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4 — Estética Funcional e Emoção -->
+                <article class="flip-card" role="listitem">
+                    <div class="flip-card__inner">
+                        <div class="flip-card__face flip-card__front">
+                            <h3>Estética Funcional &amp; Emoção</h3>
+                            <p>Interfaces agradáveis parecem mais fáceis e reduzem atrito.</p>
+                            <button class="trabalho-btn flip-card__btn"
+                                aria-label="Ver mais sobre Estética e Emoção">Ver mais</button>
+                        </div>
+                        <div class="flip-card__face flip-card__back">
+                            <h4>Estetica Funcional </h4>
+                            <div class="flip-card__content">
+                                <ul>
+                                    <li><strong>Psicologia das Formas:</strong>Círculos transmitem comunidade; quadrados transmitem estabilidade/confiança; triângulos indicam direção e energia.</li>
+                                    <li><strong>Psicologia das Cores:</strong> O azul está associado à confiança, o vermelho ao alerta/urgência, o verde ao sucesso e o amarelo ao otimismo.</li>
+                                </ul>
+                            </div>
+                            <button class="trabalho-btn flip-card__btn" aria-label="Voltar">Voltar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 5 — Micro‑interações -->
+                <article class="flip-card" role="listitem">
+                    <div class="flip-card__inner">
+                        <div class="flip-card__face flip-card__front">
+                            <h3>Micro‑interações</h3>
+                            <button class="trabalho-btn flip-card__btn" aria-label="Ver mais sobre Micro‑interações">Ver
+                                mais</button>
+                        </div>
+                        <div class="flip-card__face flip-card__back">
+                            <h4>Os “sussurros” da UI</h4>
+                            <div class="flip-card__content">
+                                <p>Micro-interações são pequenas reações visuais a uma ação do utilizador, transformando o uso do produto numa "conversa"</p>
+                                <ul>
+                                    <li><strong>Importância:</strong> feedback imediato, empatia e sensação de “sistema
+                                        vivo”.</li>
+                                    <li><strong>Princípios:</strong> objetivo claro, rápidas, regra do “menos é mais”.
+                                    </li>
+                                    <li><strong>Exemplos:</strong> adicionar ao carrinho, validação em tempo real,
+                                        transições suaves de navegação.</li>
+                                </ul>
+                            </div>
+                            <button class="trabalho-btn flip-card__btn" aria-label="Voltar">Voltar</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
 
     </main>
     <!-- Rodapé da página com informações e links -->
@@ -137,4 +264,5 @@
     <!-- Script JavaScript externo para funcionalidades interativas -->
     <script src="../assets/js/script.js"></script>
 </body>
+
 </html>
