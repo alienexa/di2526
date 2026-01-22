@@ -61,13 +61,143 @@
             <a href="pagina5.html">WCAG 2.1 e Acessibilidade</a>
         </nav>
     </aside>
-
     <!-- Seção de cabeçalho (header) com título e descrição -->
     <header role="banner">
         <!-- Título principal da página -->
-        <h1>Tipos e Formatos de Imagem</h1>
+        <h1>Acessibilidade Digital e WCAG 2.1</h1>
     </header>
+    <main class="container" role="main" aria-label="Conteúdo principal">
 
+
+        <section class="container" aria-labelledby="p4-titulo">
+
+            <section class="container" aria-labelledby="p5-titulo">
+
+                <!-- 5 cards → 3 em cima + 2 em baixo centrados -->
+                <div class="trabalhos-grid flip-grid grid-5" role="list">
+
+                    <!-- Card 1 — Acessibilidade Digital -->
+                    <article class="flip-card" role="listitem">
+                        <div class="flip-card__inner">
+                            <div class="flip-card__face flip-card__front">
+                                <h3>Acessibilidade Digital</h3>
+                                <button class="trabalho-btn flip-card__btn"
+                                    aria-label="Ver mais sobre Acessibilidade Digital">Ver mais</button>
+                            </div>
+                            <div class="flip-card__face flip-card__back">
+                                <h4>Acessibilidade Digital</h4>
+                                <div class="flip-card__content">
+                                    <p>O design de interfaces é fundamental para a interação com sistemas digitais, tornando-se essencial garantir que estas sejam acessíveis a todos, independentemente das suas capacidades físicas, sensoriais ou cognitivas.</p>
+                                    <ul>
+                                        <li><strong>Definição:</strong> A acessibilidade digital consiste em tornar produtos e serviços utilizáveis pelo maior número possível de pessoas, incluindo aquelas com deficiências visuais, auditivas, motoras, cognitivas ou neurológicas.</li>
+                                        <li><strong>Impacto Social:</strong> A falta de acessibilidade gera exclusão social e limita oportunidades profissionais. Hoje é requisito <em>ético</em>, <em>social</em> e
+                                            <em>legal</em>.</li>
+                                    </ul>
+                                </div>
+                                <button class="trabalho-btn flip-card__btn" aria-label="Voltar">Voltar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 — Padrões WCAG 2.1 -->
+                    <article class="flip-card" role="listitem">
+                        <div class="flip-card__inner">
+                            <div class="flip-card__face flip-card__front">
+                                <h3>Padrões WCAG 2.1</h3>
+                                <button class="trabalho-btn flip-card__btn" aria-label="Ver mais sobre WCAG 2.1">Ver
+                                    mais</button>
+                            </div>
+                            <div class="flip-card__face flip-card__back">
+                                <h4>WCAG 2.1 (W3C)</h4>
+                                <div class="flip-card__content">
+                                    <p>As Web Content Accessibility Guidelines (WCAG) são diretrizes desenvolvidas pelo W3C para melhorar a acessibilidade, especialmente em dispositivos móveis e para pessoas com baixa visão ou deficiências cognitivas.</p>
+                                    <ul>
+                                        <li><strong>POUR:</strong> <em>Perceptível</em> (alt text, contraste);
+                                            <em>Operável</em> (teclado); <em>Compreensível</em> (linguagem clara,
+                                            feedback); <em>Robusto</em> (HTML semântico/AT).</li>
+                                        <li><strong>Níveis:</strong> <em>A</em> (básico), <em>AA</em> (recomendado e
+                                            mais exigido), <em>AAA</em> (elevado, complexo).</li>
+                                    </ul>
+                                </div>
+                                <button class="trabalho-btn flip-card__btn" aria-label="Voltar">Voltar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 — Legislação e Obrigatoriedade -->
+                    <article class="flip-card" role="listitem">
+                        <div class="flip-card__inner">
+                            <div class="flip-card__face flip-card__front">
+                                <h3>Legislação &amp; Obrigatoriedade</h3>
+                                <button class="trabalho-btn flip-card__btn"
+                                    aria-label="Ver mais sobre Legislação e Obrigatoriedade">Ver mais</button>
+                            </div>
+                            <div class="flip-card__face flip-card__back">
+                                <h4>Leis e Normas</h4>
+                                <div class="flip-card__content">
+                                <p>Diversos países adotaram leis baseadas na WCAG para garantir a inclusão digital.</p>
+                                    <ul>
+                                        <li><strong>UE 2016/2102:</strong> que obriga organismos públicos a cumprir requisitos de acessibilidade, e o European Accessibility Act (EAA), que expande estas exigências para o setor privado.</li>
+                                        <li><strong>Importancia:</strong> As leis garantem o direito de acesso à informação e incentivam as empresas a adotarem boas práticas desde o início dos projetos.</li>
+                                    </ul>
+                                </div>
+                                <button class="trabalho-btn flip-card__btn" aria-label="Voltar">Voltar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 — Design Inclusivo -->
+                    <article class="flip-card" role="listitem">
+                        <div class="flip-card__inner">
+                            <div class="flip-card__face flip-card__front">
+                                <h3>Design Inclusivo</h3>
+                                <button class="trabalho-btn flip-card__btn"
+                                    aria-label="Ver mais sobre Design Inclusivo">Ver mais</button>
+                            </div>
+                            <div class="flip-card__face flip-card__back">
+                                <h4>Abordagem Inclusiva</h4>
+                                <div class="flip-card__content">
+                                <p>Diferente da simples adaptação de soluções após o desenvolvimento, o Design Inclusivo integra a acessibilidade desde a fase de conceção.</p>
+                                    <ul>
+                                        <li><strong>Conceito:</strong> c É uma abordagem que considera a diversidade humana, incluindo idade, género, cultura e contexto social.</li>
+                                        <li><strong>Princípios:</strong> Foco nas necessidades reais, flexibilidade, personalização da interface e participação de utilizadores diversos em testes de validação.</li>
+                                        <li><strong>Diferença:</strong> Enquanto a acessibilidade procura garantir o acesso mínimo, o design <em>inclusivo</em> vai além, criando experiências positivas e equitativas para todos.</li>
+                                    </ul>
+                                </div>
+                                <button class="trabalho-btn flip-card__btn" aria-label="Voltar">Voltar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 5 — Benefícios e Conclusão -->
+                    <article class="flip-card" role="listitem">
+                        <div class="flip-card__inner">
+                            <div class="flip-card__face flip-card__front">
+                                <h3>Benefícios &amp; Conclusão</h3>
+                                <button class="trabalho-btn flip-card__btn"
+                                    aria-label="Ver mais sobre Benefícios e Conclusão">Ver mais</button>
+                            </div>
+                            <div class="flip-card__face flip-card__back">
+                                <h4>Resultados Tangíveis</h4>
+                                <div class="flip-card__content">
+                                <p>A aplicação destes princípios traz vantagens significativas para o desenvolvimento de interfaces:</p>
+                                    <ul>
+                                        <li><strong>Inclusão Social:</strong> Garante que mais pessoas utilizem os sistemas.</li>
+                                        <li><strong>UX Melhor:</strong> Interfaces claras e consistentes beneficiam todos os utilizadores.</li>
+                                        <li><strong>Competitividade:</strong> a Produtos acessíveis atingem um público mais amplo e reduzem custos de manutenção e retrabalho a longo prazo.</li>
+                                        <li><strong>Compromisso Humano:</strong>  O design inclusivo coloca o ser humano no centro do processo, tratando a acessibili</li>
+                                    </ul>
+                                </div>
+                                <button class="trabalho-btn flip-card__btn" aria-label="Voltar">Voltar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+
+    </main>
     <!-- Rodapé da página com informações e links -->
     <footer role="contentinfo" aria-label="Informações do rodapé">
         <!-- Container do rodapé com várias seções -->

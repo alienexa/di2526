@@ -630,7 +630,7 @@ footer {
 }
 
 /* Tipografia/listas dentro das faces */
-.flip-card__face>h3{
+.flip-card__face>h3 {
     margin: 0 0 .25rem 0;
     line-height: 1.25;
     font-weight: 800;
@@ -653,7 +653,7 @@ footer {
     background-clip: text;
 }
 
-.card-scroll{
+.card-scroll {
     overflow: auto;
 }
 
@@ -992,6 +992,32 @@ footer {
     overscroll-behavior: contain;
 }
 
-.grid-fix{
-    grid-template-columns: repeat(2,360px);
+.grid-fix {
+    grid-template-columns: repeat(2, 360px);
+}
+
+
+/* 7 cards → 3 em cima + 3 no meio + 1 centrado em baixo */
+.trabalhos-grid.grid-7 {
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+}
+
+/* “Reserva” as colunas 1 e 3 na última linha, deixando a coluna 2 para o 7º card */
+.trabalhos-grid.grid-7::before,
+.trabalhos-grid.grid-7::after {
+    content: "";
+}
+
+/* Tablet/Mobile mantêm o teu comportamento padrão */
+@media (max-width: 1024px) {
+    .trabalhos-grid.grid-7 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .trabalhos-grid.grid-7 {
+        grid-template-columns: 1fr;
+    }
 }
