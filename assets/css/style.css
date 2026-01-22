@@ -640,6 +640,7 @@ footer {
     background-clip: text;
     font-size: 30px;
     margin-top: 65px;
+    text-align: center;
 }
 
 .flip-card__face>h4 {
@@ -883,7 +884,7 @@ footer {
 .flip-card__face {
     align-items: center;
     /* centra horizontalmente o conteúdo */
-    text-align: center;
+    text-align: left;
     /* centra o texto */
     /* já tens: display:flex; flex-direction:column; */
 }
@@ -923,9 +924,6 @@ footer {
     grid-template-columns: repeat(3, 1fr);
 }
 
-.trabalhos-grid.grid-5::before {
-    content: "";
-}
 
 /* “espaçador” col.1 da 2ª linha */
 
@@ -992,4 +990,8 @@ footer {
     margin-bottom: 1rem;
     padding-right: .25rem;
     overscroll-behavior: contain;
+}
+
+.grid-fix{
+    grid-template-columns: repeat(2,360px);
 }
