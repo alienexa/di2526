@@ -1,4 +1,4 @@
-# DI2526 — Desenvolvimento de Interfaces
+# DMDW Repositório Design de Interfaces — Desenvolvimento de Interfaces
 
 Este repositório contém o website desenvolvido para a unidade curricular **DI2526**, focada em princípios de design, estruturação de conteúdos e implementação de interfaces web. O projeto inclui páginas informativas, recursos visuais e uma navegação simples, organizada e responsiva.
 
