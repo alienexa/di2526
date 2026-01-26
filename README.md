@@ -4,7 +4,7 @@ Este repositório contém o website desenvolvido para a unidade curricular **DI2
 
 ## 🌐 Demonstração
 Aceda ao site publicado através do GitHub Pages:  
-https://alienexa.github.io/di2526/
+https://alienexa.github.io/repositorio-design-interfaces/
 
 ## 📁 Estrutura do Projeto
 - **assets/** — Imagens, ícones e outros recursos visuais utilizados no site.  
